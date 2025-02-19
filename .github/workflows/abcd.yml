@@ -20,3 +20,9 @@ jobs:
         with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Build and push
+        uses: abhishek1519/myfirstrepo@v3
+        with:
+          push: true
+          tags: user/app:latest
